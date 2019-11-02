@@ -44,4 +44,46 @@ public class JavaArrays {
         return Arrays.copyOf(numbers, numbers.length - 1);
     }
 
+    //Write a Java reverse an array
+    public int[] reverseArray() {
+
+//        int arrLen = numbers.length;
+//        int tmp;
+//        for (int i = 0; i < (arrLen - 1)/2; i++) {
+//            tmp = numbers[i];
+//            numbers[i] = numbers[arrLen - 1 - i];
+//            numbers[arrLen - 1 -i] = tmp;
+//        }
+
+        List<Integer> integerList = Arrays.stream(numbers)
+                .boxed()
+                .collect(Collectors.toList());
+
+        Collections.reverse(integerList);
+
+        return integerList.stream().mapToInt(i -> i.intValue()).toArray();
+    }
+
+    //Sort an array
+    public void arraySort() {
+
+        int temp;
+
+        for (int j = 0; j < numbers.length; j++) {
+            for (int i = 0; i < numbers.length - 1 - j; i++) {
+                if (numbers[i] > numbers[i+1]) {
+                    temp = numbers[i];
+                    numbers[i] = numbers[i+1];
+                    numbers[i+1] = temp;
+                }
+            }
+        }
+
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+    }
+
+
+
 }
