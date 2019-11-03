@@ -64,5 +64,8 @@ public class Employee {
                 this.getAge() == employee.getAge();
     }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, age);
+    }
 }

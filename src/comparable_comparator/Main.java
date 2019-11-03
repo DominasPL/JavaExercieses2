@@ -29,9 +29,13 @@ public class Main {
         Set<Employee> employeeSet = new HashSet<>();
         AmazonEmployee amazonEmployee1 = new AmazonEmployee(employee1, "Section1");
         AmazonEmployee amazonEmployee2 = new AmazonEmployee(employee1, "Section2");
-        System.out.println(employee1.equals(amazonEmployee1));
-        System.out.println(employee1.equals(amazonEmployee2));
-        System.out.println(amazonEmployee1.equals(amazonEmployee2));
+//        System.out.println(employee1.equals(amazonEmployee1));
+//        System.out.println(employee1.equals(amazonEmployee2));
+//        System.out.println(amazonEmployee1.equals(amazonEmployee2));
+
+        System.out.println(employee1.hashCode());
+        System.out.println(employee10.hashCode());
+        System.out.println(employee2.hashCode());
 
 
 
